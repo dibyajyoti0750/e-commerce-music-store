@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+
+  const { setShowSearch } = useContext(ShopContext);
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
@@ -18,7 +21,7 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink to="/collection" className="flex flex-col items-center gap-1">
-          <p>COLLECTION</p>
+          <p>INSTRUMENTS</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
 
@@ -34,7 +37,12 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center gap-6">
-        <img className="w-6 cursor-pointer" src={assets.search_icon} alt="" />
+        <img
+          onClick={() => setShowSearch(true)}
+          src={assets.search_icon}
+          className="w-6 cursor-pointer"
+          alt=""
+        />
         {/* <a href="https://www.flaticon.com/free-icons/magnifier" title="magnifier icons">Magnifier icons created by Graphics Plazza - Flaticon</a> */}
 
         <div className="group relative">
