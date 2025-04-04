@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
+import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
@@ -65,28 +66,63 @@ const Product = () => {
             <img src={assets.star_icon} alt="" className="w-3.5" />
             <img src={assets.star_icon} alt="" className="w-3.5" />
             <img src={assets.star_dull_icon} alt="" className="w-3.5" />
-            <p className="pl-2">(123)</p>
+            <p className="ml-2">(179 ratings)</p>
           </div>
-          <p className="mt-5 text-3xl font-medium">
-            {currency}
-            {productData.price}
-          </p>
+
+          {productData.bestseller && (
+            <div className="inline-block bg-yellow-300 text-xs text-black px-3 py-1 rounded-full mt-2">
+              Bestseller
+            </div>
+          )}
+
+          <div className="mt-5">
+            {/* Discount & Final Price in same row */}
+            <div className="flex items-baseline gap-3">
+              {/* Discount Percentage */}
+              {productData.originalPrice && (
+                <p className="text-2xl text-green-600 font-bold">
+                  {Math.round(
+                    ((productData.originalPrice - productData.price) /
+                      productData.originalPrice) *
+                      100
+                  )}
+                  % OFF
+                </p>
+              )}
+
+              {/* Final Price */}
+              <p className="text-4xl font-medium">
+                {currency}
+                {productData.price}
+              </p>
+            </div>
+
+            {/* Original Price below */}
+            {productData.originalPrice && (
+              <p className="text-gray-400 line-through text-sm mt-1">
+                {currency}
+                {productData.originalPrice}
+              </p>
+            )}
+          </div>
+
           <p className="mt-5 text-gray-500 md:w-4/5">
             {productData.description}
           </p>
-          <div className="flex flex-col gap-4 my-8">
+
+          {/* Tuning */}
+          <div className="mt-5">
+            <h3 className="text-lg font-medium">Tuning</h3>
+            <p className="text-gray-600 text-sm">{productData.tuning}</p>
+          </div>
+
+          {/* Materials */}
+          <div className="flex flex-col gap-4 mt-5">
             <h3 className="text-lg font-medium">Materials</h3>
             <div className="flex flex-wrap gap-2">
               {productData.materials.map((material, index) => (
                 <div
-                  /*
-                  onClick={() => setSize(material)}
-                  className={`border px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm cursor-pointer ${
-                    material === size ? "border-orange-500" : ""
-                  }`}
-                  */
-
-                  className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm"
+                  className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
                   key={index}
                 >
                   {material}
@@ -95,7 +131,18 @@ const Product = () => {
             </div>
           </div>
 
-          <button className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">
+          {/* Weight & Dimensions */}
+          <div className="mt-5">
+            <h3 className="text-lg font-medium">Specifications</h3>
+            <p className="text-gray-600 text-sm">
+              Weight: {productData.weight}
+            </p>
+            <p className="text-gray-600 text-sm">
+              Dimensions: {productData.dimensions}
+            </p>
+          </div>
+
+          <button className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 mt-6">
             ADD TO CART
           </button>
 
@@ -108,6 +155,36 @@ const Product = () => {
           </div>
         </div>
       </div>
+
+      {/* -------------------- Description & Review Section -------------------- */}
+      <div className="mt-20">
+        <div className="flex">
+          <b className="border px-5 py-3 text-sm">Description</b>
+          <p className="border px-5 py-3 text-sm">Reviews (179)</p>
+        </div>
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+          <p>
+            Welcome to Rudra & Son's Music House - a place where the rich sound
+            of Indian classical music comes to life. We offer a carefully
+            curated collection of handcrafted sitars, sarods, tanpuras, and
+            more, made by experienced artisans who truly understand the soul of
+            each instrument.
+          </p>
+          <p>
+            Whether you're a performer, student, or collector, you'll find
+            instruments and accessories that meet both traditional and modern
+            needs. From mizrabs and string sets to hard cases and tuners, we
+            provide everything you need to stay in tune with the soul of Indian
+            classical music.
+          </p>
+        </div>
+      </div>
+
+      {/* -------------------- display related products -------------------- */}
+      <RelatedProducts
+        category={productData.category}
+        subCategory={productData.subCategory}
+      />
     </div>
   ) : (
     <div className="opacity-0"></div>

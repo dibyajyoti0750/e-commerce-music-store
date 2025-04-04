@@ -52,7 +52,8 @@ export const products = [
     name: "Handcrafted Classical Sarod",
     description:
       "A fretless string instrument known for its deep, resonant sound, widely used in Hindustani classical music.",
-    price: 32000,
+    price: 25000,
+    originalPrice: 40000,
     image: [product1, product2, product1, product2],
     category: "Sarod",
     subCategory: "Plucked",
@@ -68,7 +69,8 @@ export const products = [
     name: "Concert Grade Santur",
     description:
       "A trapezoidal wooden instrument with strings struck by mallets, producing a melodious sound.",
-    price: 28000,
+    price: 15000,
+    originalPrice: 22000,
     image: [product2, product1, product2, product1],
     category: "Santur",
     subCategory: "Struck",
@@ -84,7 +86,8 @@ export const products = [
     name: "Classical Swarmandal",
     description:
       "A harp-like Indian instrument used to create soothing background harmonics in classical music.",
-    price: 18000,
+    price: 12000,
+    originalPrice: 18000,
     image: [product1, product2, product1, product2],
     category: "Swarmandal",
     subCategory: "Plucked",
@@ -100,7 +103,8 @@ export const products = [
     name: "Handmade Dilruba",
     description:
       "A bowed string instrument with sympathetic strings, often used in Sikh devotional music.",
-    price: 20000,
+    price: 15000,
+    originalPrice: 22000,
     image: [product2, product1, product2, product1],
     category: "Esraj",
     subCategory: "Bowed",
@@ -116,7 +120,8 @@ export const products = [
     name: "Esraj with Professional Bow",
     description:
       "A bowed instrument known for its soft, expressive sound, used in Hindustani classical music.",
-    price: 22000,
+    price: 25000,
+    originalPrice: 32000,
     image: [product1, product2, product1, product2],
     category: "Esraj",
     subCategory: "Bowed",
@@ -132,7 +137,8 @@ export const products = [
     name: "Large Esraj Deluxe",
     description:
       "A bigger variant of the Esraj, producing a deeper, more resonant tone for professional musicians.",
-    price: 26000,
+    price: 22000,
+    originalPrice: 30000,
     image: [product2, product1, product2, product1],
     category: "Esraj",
     subCategory: "Bowed",
@@ -148,7 +154,8 @@ export const products = [
     name: "Sitar - Pt. Ravi Shankar Gharana",
     description:
       "A sitar built in the style of Pt. Ravi Shankar, featuring deep resonance and rich tonal quality.",
-    price: 30000,
+    price: 15000,
+    originalPrice: 22000,
     image: [product1, product2, product1, product2],
     category: "Sitar",
     subCategory: "Plucked",
@@ -164,7 +171,8 @@ export const products = [
     name: "Sitar - Pt. Vilayat Khan Gharana",
     description:
       "A sitar built in the style of Pt. Vilayat Khan, designed for a melodious gayaki ang playing style.",
-    price: 29000,
+    price: 18000,
+    originalPrice: 25000,
     image: [product2, product1, product2, product1],
     category: "Sitar",
     subCategory: "Plucked",
@@ -180,7 +188,8 @@ export const products = [
     name: "Professional Tanpura",
     description:
       "A long-necked plucked instrument providing a harmonic drone in Indian classical music.",
-    price: 25000,
+    price: 10000,
+    originalPrice: 16000,
     image: [product1, product2, product1, product2],
     category: "Tanpura",
     subCategory: "Plucked",
@@ -196,7 +205,8 @@ export const products = [
     name: "Compact Box Tanpura",
     description:
       "A portable tanpura with a box design, perfect for travel and practice sessions.",
-    price: 15000,
+    price: 10000,
+    originalPrice: 14000,
     image: [product2, product1, product2, product1],
     category: "Tanpura",
     subCategory: "Plucked",
@@ -212,7 +222,8 @@ export const products = [
     name: "Swarmandal + Tanpura Combo",
     description:
       "A unique combination of swarmandal and tanpura, ideal for vocal accompaniment.",
-    price: 34000,
+    price: 35000,
+    originalPrice: 45000,
     image: [product1, product2, product1, product2],
     category: "Tanpura",
     subCategory: "Plucked",
@@ -228,7 +239,8 @@ export const products = [
     name: "Sursringar for Professionals",
     description:
       "A deep-toned instrument similar to the sarod, with a classical resonance.",
-    price: 27000,
+    price: 17000,
+    originalPrice: 25000,
     image: [product2, product1, product2, product1],
     category: "Sarod",
     subCategory: "Plucked",
@@ -245,7 +257,8 @@ export const products = [
     name: "Handcrafted Sarangi",
     description:
       "A bowed short-necked string instrument, widely used in Hindustani classical and folk music.",
-    price: 26000,
+    price: 35000,
+    originalPrice: 45000,
     image: [product1, product2, product1, product2],
     category: "Sarangi",
     subCategory: "Bowed",
@@ -261,7 +274,8 @@ export const products = [
     name: "Sur Bahar - Bass Sitar",
     description:
       "A deeper and larger variant of the sitar, producing rich bass tones, ideal for dhrupad music.",
-    price: 31000,
+    price: 25000,
+    originalPrice: 32000,
     image: [product2, product1, product2, product1],
     category: "Sitar",
     subCategory: "Plucked",
@@ -277,7 +291,8 @@ export const products = [
     name: "Traditional Punjabi Rabab",
     description:
       "A short-necked plucked instrument known for its deep, resonant sound, played in Sikh and Afghan traditions.",
-    price: 19000,
+    price: 25000,
+    originalPrice: 32000,
     image: [product1, product2, product1, product2],
     category: "Rabab",
     subCategory: "Plucked",
@@ -294,6 +309,7 @@ export const products = [
     description:
       "A traditional Afghan instrument, known for its deep tones and intricate carving.",
     price: 25000,
+    originalPrice: 32000,
     image: [product2, product1, product2, product1],
     category: "Rabab",
     subCategory: "Plucked",
@@ -309,7 +325,8 @@ export const products = [
     name: "Electric Sitar",
     description:
       "A modern adaptation of the sitar with built-in pickups for amplified performances.",
-    price: 28000,
+    price: 16000,
+    originalPrice: 22000,
     image: [product1, product2, product1, product2],
     category: "Sitar",
     subCategory: "Plucked",
@@ -325,7 +342,8 @@ export const products = [
     name: "Small Tanpuri for Practice",
     description:
       "A compact version of the tanpura, designed for students and travel musicians.",
-    price: 12000,
+    price: 8000,
+    originalPrice: 12000,
     image: [product2, product1, product2, product1],
     category: "Tanpura",
     subCategory: "Plucked",
@@ -344,6 +362,7 @@ export const products = [
     description:
       "A complete set of high-quality sitar strings designed for rich resonance and durability.",
     price: 1200,
+    originalPrice: 1500,
     image: [product1, product2, product1, product2],
     category: "Strings",
     subCategory: "Professional",
@@ -360,6 +379,7 @@ export const products = [
     description:
       "A set of durable and bright-sounding strings for professional sarod players.",
     price: 1500,
+    originalPrice: 1800,
     image: [product2, product1, product2, product1],
     category: "Strings",
     subCategory: "Professional",
@@ -378,6 +398,7 @@ export const products = [
     description:
       "A sturdy, padded hard case designed to protect your sitar from damage during travel.",
     price: 5000,
+    originalPrice: 6500,
     image: [product1, product2, product1, product2],
     category: "Cases",
     subCategory: "Professional",
@@ -394,6 +415,7 @@ export const products = [
     description:
       "A lightweight, cushioned gig bag offering protection and portability for your tanpura.",
     price: 2500,
+    originalPrice: 3500,
     image: [product2, product1, product2, product1],
     category: "Cases",
     subCategory: "Student",
@@ -412,6 +434,7 @@ export const products = [
     description:
       "A durable brass mizrab designed for professional sitar players to produce crisp, clear tones.",
     price: 500,
+    originalPrice: 800,
     image: [product1, product2, product1, product2],
     category: "Plectrums",
     subCategory: "Professional",
@@ -428,6 +451,7 @@ export const products = [
     description:
       "Handmade coconut shell plectrum designed for traditional sarod playing.",
     price: 700,
+    originalPrice: 1000,
     image: [product2, product1, product2, product1],
     category: "Plectrums",
     subCategory: "Professional",
@@ -446,6 +470,7 @@ export const products = [
     description:
       "A high-quality clip-on pickup for amplifying acoustic Indian classical instruments.",
     price: 3000,
+    originalPrice: 4000,
     image: [product1, product2, product1, product2],
     category: "Electronics",
     subCategory: "Professional",
@@ -462,6 +487,7 @@ export const products = [
     description:
       "A chromatic digital tuner optimized for tuning Indian classical instruments accurately.",
     price: 1800,
+    originalPrice: 2500,
     image: [product2, product1, product2, product1],
     category: "Electronics",
     subCategory: "Student",
