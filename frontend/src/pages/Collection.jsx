@@ -88,10 +88,11 @@ const Collection = () => {
         >
           FILTERS
           <img
-            className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`}
-            src={assets.dropdown_icon}
-            alt="Dropdown icon"
+            className={`h-4 sm:hidden ${showFilter ? "rotate-90" : ""}`}
+            src={showFilter ? assets.filter_on : assets.filter_off}
+            alt="Filter icon"
           />
+          {/* <a href="https://www.flaticon.com/free-icons/filter" title="filter icons">Filter icons created by Arkinasi - Flaticon</a> */}
         </p>
 
         {/* Category Filter */}

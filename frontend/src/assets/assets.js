@@ -17,8 +17,10 @@ import product2 from "./product2.jpeg";
 import star_icon from "./star.png";
 import star_dull_icon from "./star_dull.png";
 
+import filter_on from "./filter_on.png";
+import filter_off from "./filter_off.png";
+
 import bin_icon from "./bin_icon.png";
-import dropdown_icon from "./dropdown_icon.png";
 import about_img from "./about_img.png";
 import contact_img from "./contact_img.png";
 import razorpay_logo from "./razorpay_logo.png";
@@ -29,16 +31,17 @@ export const assets = {
   search_icon,
   profile_icon,
   cart_icon,
+  menu_icon,
   hero_img,
   replace_icon,
   check_icon,
   support_icon,
-
-  dropdown_icon,
-  star_dull_icon,
+  filter_on,
+  filter_off,
   star_icon,
+  star_dull_icon,
+
   bin_icon,
-  menu_icon,
   about_img,
   contact_img,
   razorpay_logo,
