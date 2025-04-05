@@ -20,11 +20,11 @@ import star_dull_icon from "./star_dull.png";
 import filter_on from "./filter_on.png";
 import filter_off from "./filter_off.png";
 import bin_icon from "./bin.png";
+import stripe_logo from "./Stripe.png";
+import razorpay_logo from "./Razorpay.png";
 
 import about_img from "./about_img.png";
 import contact_img from "./contact_img.png";
-import razorpay_logo from "./razorpay_logo.png";
-import stripe_logo from "./stripe_logo.png";
 
 export const assets = {
   musical,
@@ -41,11 +41,11 @@ export const assets = {
   star_icon,
   star_dull_icon,
   bin_icon,
+  stripe_logo,
+  razorpay_logo,
 
   about_img,
   contact_img,
-  razorpay_logo,
-  stripe_logo,
   cross_icon,
 };
 
