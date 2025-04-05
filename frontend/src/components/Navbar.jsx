@@ -46,11 +46,13 @@ const Navbar = () => {
         {/* <a href="https://www.flaticon.com/free-icons/magnifier" title="magnifier icons">Magnifier icons created by Graphics Plazza - Flaticon</a> */}
 
         <div className="group relative">
-          <img
-            className="w-6 cursor-pointer"
-            src={assets.profile_icon}
-            alt=""
-          />
+          <Link to={"/login"}>
+            <img
+              className="w-6 cursor-pointer"
+              src={assets.profile_icon}
+              alt=""
+            />
+          </Link>
           {/* <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Graphics Plazza - Flaticon</a> */}
 
           <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
