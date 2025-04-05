@@ -6,8 +6,9 @@ import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products } = useContext(ShopContext);
-  const { currencyDollar, currencyRupee } = useContext(ShopContext);
+  const { products, currencyRupee, currencyDollar, addToCart } =
+    useContext(ShopContext);
+
   const [currency, setCurrency] = useState(currencyRupee); // Default: Rupee
 
   // const [size, setSize] = useState("");
@@ -20,7 +21,6 @@ const Product = () => {
       if (item._id === productId) {
         setProductData(item);
         setImage(item.image[0]);
-        console.log(item);
         return null;
       }
     });
@@ -142,7 +142,11 @@ const Product = () => {
             </p>
           </div>
 
-          <button className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 mt-6">
+          <button
+            // onClick={() => addToCart(productData._id, size)}
+            onClick={() => addToCart(productData._id)}
+            className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 mt-6"
+          >
             ADD TO CART
           </button>
 
