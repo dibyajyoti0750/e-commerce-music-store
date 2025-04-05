@@ -7,7 +7,7 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currencyDollar = "$";
   const currencyRupee = "₹";
-  const delivery_fee = 10;
+  const delivery_fee = 70;
 
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
@@ -26,8 +26,8 @@ const ShopContextProvider = (props) => {
     setCartItems(cartData);
 
     toast.success("Item added to cart!", {
-      position: "bottom-right",
-      autoClose: 2000,
+      position: "top-right",
+      autoClose: 1500,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -44,6 +44,42 @@ const ShopContextProvider = (props) => {
       }
     }
     return totalCount;
+  };
+
+  const updateQuantity = async (itemId, quantity) => {
+    let cartData = structuredClone(cartItems);
+
+    if (quantity > 0) {
+      cartData[itemId] = quantity;
+    } else {
+      delete cartData[itemId]; // removes item from cart
+      toast.info("Item removed from cart", {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      });
+    }
+
+    setCartItems(cartData);
+  };
+
+  const getCartAmount = () => {
+    let totalAmount = 0;
+
+    for (const itemId in cartItems) {
+      const quantity = cartItems[itemId];
+      const itemInfo = products.find((product) => product._id === itemId);
+
+      if (itemInfo && quantity > 0) {
+        totalAmount += itemInfo.price * quantity;
+      }
+    }
+
+    return totalAmount;
   };
 
   /*
@@ -85,6 +121,28 @@ const ShopContextProvider = (props) => {
 
     return totalCount;
   };
+
+  const updateQuantity = async (itemId, size, quantity) => {
+    let cartData = structuredClone(cartItems);
+    cartData[itemId][size] = quantity;
+    setCartItems(cartData);
+  };
+
+  const getCartAmount = () => {
+    let totalAmount = 0;
+    for (const items in cartItems) {
+      let itemInfo = products.find((product) => product._id === items);
+      for (const item in cartItems[items]) {
+        try {
+          if (cartItems[items][item] > 0) {
+            totalAmount += itemInfo.price * cartItems[items][item];
+          }
+        } catch (error) {}
+      }
+    }
+
+    return totalAmount;
+  };
   */
 
   const value = {
@@ -99,6 +157,8 @@ const ShopContextProvider = (props) => {
     cartItems,
     addToCart,
     getCartCount,
+    updateQuantity,
+    getCartAmount,
   };
 
   return (

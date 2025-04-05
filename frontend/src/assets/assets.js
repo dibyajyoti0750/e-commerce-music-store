@@ -19,8 +19,8 @@ import star_dull_icon from "./star_dull.png";
 
 import filter_on from "./filter_on.png";
 import filter_off from "./filter_off.png";
+import bin_icon from "./bin.png";
 
-import bin_icon from "./bin_icon.png";
 import about_img from "./about_img.png";
 import contact_img from "./contact_img.png";
 import razorpay_logo from "./razorpay_logo.png";
@@ -40,8 +40,8 @@ export const assets = {
   filter_off,
   star_icon,
   star_dull_icon,
-
   bin_icon,
+
   about_img,
   contact_img,
   razorpay_logo,
