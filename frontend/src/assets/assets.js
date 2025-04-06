@@ -1,9 +1,9 @@
 import musical from "./musical.png";
 import search_icon from "./search.png";
+import cross_icon from "./close.png";
 import profile_icon from "./user.png";
 import cart_icon from "./shopping-bag.png";
 import menu_icon from "./menu.png";
-import cross_icon from "./close.png";
 import hero_img from "./hero.jpeg";
 import replace_icon from "./replacement.png";
 import check_icon from "./badge.png";
@@ -23,6 +23,7 @@ import contact_img from "./contact.jpg";
 export const assets = {
   musical,
   search_icon,
+  cross_icon,
   profile_icon,
   cart_icon,
   menu_icon,
@@ -37,10 +38,8 @@ export const assets = {
   bin_icon,
   stripe_logo,
   razorpay_logo,
-
   about_img,
   contact_img,
-  cross_icon,
 };
 
 export const products = [
