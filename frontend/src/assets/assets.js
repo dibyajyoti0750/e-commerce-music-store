@@ -23,8 +23,7 @@ import bin_icon from "./bin.png";
 import stripe_logo from "./Stripe.png";
 import razorpay_logo from "./Razorpay.png";
 import about_img from "./about.jpg";
-
-import contact_img from "./contact_img.png";
+import contact_img from "./contact.jpg";
 
 export const assets = {
   musical,

@@ -22,7 +22,7 @@ const Hero = () => {
             <p className="font-semibold text-base md:text-lg hover:opacity-80 transition-opacity">
               SHOP NOW
             </p>
-            <div className="w-10 md:w-16 h-[1px] bg-[#414141] flex-shrink-0" />
+            <div className="w-10 md:w-16 h-[1.5px] bg-[#414141] flex-shrink-0" />
           </div>
         </div>
       </div>

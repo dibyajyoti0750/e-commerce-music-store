@@ -16,7 +16,7 @@ const About = () => {
           src={assets.about_img}
           alt=""
         />
-        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
+        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-500">
           <p>
             Welcome to Rudra & Son's Music House—a family-run store built on a
             lifelong love for Indian classical music. We offer a carefully
