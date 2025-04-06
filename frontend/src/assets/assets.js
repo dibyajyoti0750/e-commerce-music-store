@@ -5,7 +5,7 @@ import cart_icon from "./shopping-bag.png";
 import menu_icon from "./menu.png";
 import cross_icon from "./close.png";
 
-import hero_img from "./hero_img.jpeg";
+import hero_img from "./hero.jpeg";
 
 import replace_icon from "./replacement.png";
 import check_icon from "./badge.png";
@@ -16,14 +16,14 @@ import product2 from "./product2.jpeg";
 
 import star_icon from "./star.png";
 import star_dull_icon from "./star_dull.png";
-
 import filter_on from "./filter_on.png";
 import filter_off from "./filter_off.png";
+
 import bin_icon from "./bin.png";
 import stripe_logo from "./Stripe.png";
 import razorpay_logo from "./Razorpay.png";
+import about_img from "./about.jpg";
 
-import about_img from "./about_img.png";
 import contact_img from "./contact_img.png";
 
 export const assets = {
