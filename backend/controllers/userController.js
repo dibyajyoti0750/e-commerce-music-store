@@ -90,4 +90,4 @@ const adminLogin = async (req, res) => {
   // admin login logic here
 };
 
-export default { loginUser, registerUser, adminLogin };
+export { loginUser, registerUser, adminLogin };
