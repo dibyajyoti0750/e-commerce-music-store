@@ -3,8 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 
 const Orders = () => {
-  const { products, currencyRupee, currencyDollar } = useContext(ShopContext);
-  const [currency, setCurrency] = useState(currencyRupee); // Default: Rupee
+  const { products, currencySymbol } = useContext(ShopContext);
 
   return (
     <div className="border-t pt-16">
@@ -24,11 +23,10 @@ const Orders = () => {
                 <p className="text-base font-medium">{item.name}</p>
                 <div className="flex items-center gap-3 mt-2 text-base text-gray-700">
                   <p className="text-lg">
-                    {currency}
+                    {currencySymbol}
                     {item.price}
                   </p>
                   <p>Quantity: 1</p>
-                  {/* <p>Size: M</p> */}
                 </div>
                 <p className="mt-2">
                   Date: <span className="text-gray-400">05 April, 2025</span>

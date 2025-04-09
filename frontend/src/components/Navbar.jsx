@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-5 font-medium">
       <Link to="/">
-        <img src={assets.musical} className="w-10" alt="" />
+        <img src={assets.musical} className="w-10" alt="Logo" />
       </Link>
       {/* <a href="https://www.flaticon.com/free-icons/sitar" title="sitar icons">Sitar icons created by Three musketeers - Flaticon</a> */}
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">

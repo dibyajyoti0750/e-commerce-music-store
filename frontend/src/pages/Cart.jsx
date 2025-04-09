@@ -7,14 +7,12 @@ import CartTotal from "../components/CartTotal";
 const Cart = () => {
   const {
     products,
-    currencyRupee,
-    currencyDollar,
+    currencySymbol,
+    getConvertedPrice,
     cartItems,
     updateQuantity,
     navigate,
   } = useContext(ShopContext);
-
-  const [currency, setCurrency] = useState(currencyRupee); // Default: Rupee
 
   const [cartData, setCartData] = useState([]);
 
@@ -32,24 +30,6 @@ const Cart = () => {
 
     setCartData(tempData);
   }, [cartItems]);
-
-  /*
-  useEffect(() => {
-    const tempData = [];
-    for (const items in cartItems) {
-      for (const item in cartItems[items]) {
-        if (cartItems[items][item > 0]) {
-          tempData.push({
-            _id: items,
-            size: item,
-            quantity: cartItems[items][item],
-          });
-        }
-      }
-    }
-    console.log(tempData);
-  }, [cartItems]);
-  */
 
   return (
     <div className="border-t pt-14">
@@ -80,13 +60,9 @@ const Cart = () => {
                   </p>
                   <div className="flex items-center gap-5 mt-2">
                     <p>
-                      {currency}
-                      {productData.price}
+                      {currencySymbol}
+                      {getConvertedPrice(productData.price)}
                     </p>
-
-                    {/* <p className="px-2 sm:px-3 sm:py-1 border bg-slate-50">
-                      {item.size}
-                    </p> */}
                   </div>
                 </div>
               </div>

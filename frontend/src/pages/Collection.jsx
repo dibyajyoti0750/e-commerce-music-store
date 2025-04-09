@@ -72,7 +72,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch]);
+  }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
     sortProduct();
@@ -249,7 +249,7 @@ const Collection = () => {
         ) : (
           <div className="text-center text-gray-500 text-lg mt-10">
             {search
-              ? `Sorry, we couldn’t find anything related to "${search}".`
+              ? `Sorry, we couldn't find anything related to "${search}".`
               : "No products available."}
           </div>
         )}

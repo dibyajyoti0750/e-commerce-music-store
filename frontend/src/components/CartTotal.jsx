@@ -3,10 +3,9 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 
 const CartTotal = () => {
-  const { currencyRupee, currencyDollar, delivery_fee, getCartAmount } =
+  const { currencySymbol, getConvertedPrice, delivery_fee, getCartAmount } =
     useContext(ShopContext);
 
-  const [currency, setCurrency] = useState(currencyRupee); // Default: Rupee
   const subtotal = getCartAmount();
   const total = subtotal === 0 ? 0 : subtotal + delivery_fee;
 
@@ -20,21 +19,30 @@ const CartTotal = () => {
         <div className="flex justify-between">
           <p>Subtotal</p>
           <p>
-            {currency} {subtotal}.00
+            {currencySymbol}{" "}
+            {currencySymbol === "$"
+              ? getConvertedPrice(subtotal)
+              : getConvertedPrice(subtotal).toFixed(2)}
           </p>
         </div>
         <hr />
         <div className="flex justify-between">
           <p>Shipping Fee</p>
           <p>
-            {currency} {delivery_fee}.00
+            {currencySymbol}{" "}
+            {currencySymbol === "$"
+              ? getConvertedPrice(delivery_fee)
+              : getConvertedPrice(delivery_fee).toFixed(2)}
           </p>
         </div>
         <hr />
         <div className="flex justify-between">
           <b>Total</b>
           <b>
-            {currency} {total}.00
+            {currencySymbol}{" "}
+            {currencySymbol === "$"
+              ? getConvertedPrice(total)
+              : getConvertedPrice(total).toFixed(2)}
           </b>
         </div>
       </div>

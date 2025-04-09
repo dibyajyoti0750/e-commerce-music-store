@@ -6,12 +6,8 @@ import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currencyRupee, currencyDollar, addToCart } =
+  const { products, currencySymbol, getConvertedPrice, addToCart } =
     useContext(ShopContext);
-
-  const [currency, setCurrency] = useState(currencyRupee); // Default: Rupee
-
-  // const [size, setSize] = useState("");
 
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
@@ -92,16 +88,16 @@ const Product = () => {
 
               {/* Final Price */}
               <p className="text-4xl font-medium">
-                {currency}
-                {productData.price}
+                {currencySymbol}
+                {getConvertedPrice(productData.price)}
               </p>
             </div>
 
             {/* Original Price below */}
             {productData.originalPrice && (
               <p className="text-gray-400 line-through text-sm mt-1">
-                {currency}
-                {productData.originalPrice}
+                {currencySymbol}
+                {getConvertedPrice(productData.originalPrice)}
               </p>
             )}
           </div>
@@ -143,7 +139,6 @@ const Product = () => {
           </div>
 
           <button
-            // onClick={() => addToCart(productData._id, size)}
             onClick={() => addToCart(productData._id)}
             className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700 mt-6"
           >
