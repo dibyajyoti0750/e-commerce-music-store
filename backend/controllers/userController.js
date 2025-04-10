@@ -14,7 +14,7 @@ const loginUser = async (req, res) => {
     const user = await userModel.findOne({ email });
 
     if (!user) {
-      return res.status(400).json({
+      return res.json({
         success: false,
         message: "No account found with the provided email address.",
       });
@@ -26,7 +26,7 @@ const loginUser = async (req, res) => {
       const token = createToken(user._id);
       res.json({ success: true, token });
     } else {
-      return res.status(400).json({
+      return res.json({
         success: false,
         message: "Incorrect password. Please try again.",
       });
@@ -44,7 +44,7 @@ const registerUser = async (req, res) => {
     const exists = await userModel.findOne({ email });
 
     if (exists) {
-      return res.status(400).json({
+      return res.json({
         success: false,
         message: "A user with this email already exists.",
       });
