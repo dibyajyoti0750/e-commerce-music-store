@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { backendUrl, currency } from "../App";
 import { toast } from "react-toastify";
+import { Trash2 } from "lucide-react";
 
 const List = ({ token }) => {
   const [list, setList] = useState([]);
@@ -39,6 +40,13 @@ const List = ({ token }) => {
       console.log(error);
       toast.error(error.message);
     }
+  };
+
+  const confirmAndRemove = (id) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this item?"
+    );
+    if (confirmed) removeProduct(id);
   };
 
   useEffect(() => {
@@ -88,12 +96,12 @@ const List = ({ token }) => {
             </p>
 
             {/* Action */}
-            <p
-              onClick={() => removeProduct(item._id)}
-              className="text-right md:text-center text-lg cursor-pointer text-red-500 hover:text-red-700"
-            >
-              X
-            </p>
+            <div className="flex justify-center">
+              <Trash2
+                onClick={() => confirmAndRemove(item._id)}
+                className="w-4 h-4 text-red-500 hover:text-red-700 cursor-pointer"
+              />
+            </div>
           </div>
         ))}
       </div>

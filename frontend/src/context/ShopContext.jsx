@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
   }, [currency]);
 
   const currencySymbol = currency === "₹" ? "₹" : "$";
-  const delivery_fee = currency === "₹" ? 180 : 860;
+  const delivery_fee = currency === "₹" ? 860 : 17150;
 
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -180,6 +180,7 @@ const ShopContextProvider = (props) => {
     setShowSearch,
     cartItems,
     addToCart,
+    setCartItems,
     getCartCount,
     updateQuantity,
     getCartAmount,
