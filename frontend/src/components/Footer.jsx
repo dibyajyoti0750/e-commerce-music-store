@@ -6,7 +6,11 @@ const Footer = () => {
     <div>
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
-          <img src={assets.musical} className="mb-5 w-10" alt="" />
+          <img
+            src={assets.logo}
+            className="mb-5 w-14 -rotate-[20deg]"
+            alt="Logo"
+          />
           {/* <a href="https://www.flaticon.com/free-icons/sitar" title="sitar icons">Sitar icons created by Three musketeers - Flaticon</a> */}
           <p className="w-full md:w-2/3 text-gray-600">
             Experience the soulful melodies of Indian classical music with our

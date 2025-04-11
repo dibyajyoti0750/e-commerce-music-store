@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const Navbar = ({ setToken }) => {
   return (
     <div className="flex items-center py-2 px-[4%] justify-between">
-      <img className="w-14" src={assets.logo} alt="Logo" />
+      <img src={assets.logo} className="w-14 -rotate-[20deg]" alt="Logo" />
       <button
         onClick={() => {
           setToken("");

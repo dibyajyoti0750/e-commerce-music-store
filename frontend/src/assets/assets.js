@@ -1,4 +1,5 @@
 import musical from "./musical.png";
+import logo from "./icon.png";
 import search_icon from "./search.png";
 import cross_icon from "./close.png";
 import profile_icon from "./user.png";
@@ -21,7 +22,7 @@ import about_img from "./about.jpg";
 import contact_img from "./contact.jpg";
 
 export const assets = {
-  musical,
+  logo,
   search_icon,
   cross_icon,
   profile_icon,

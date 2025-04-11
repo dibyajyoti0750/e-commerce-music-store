@@ -1,4 +1,4 @@
-import logo from "./musical.png";
+import logo from "./icon.png";
 import add_icon from "./add.png";
 import list_icon from "./package.png";
 import order_icon from "./orders.png";
