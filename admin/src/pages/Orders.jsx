@@ -18,7 +18,7 @@ const Orders = ({ token }) => {
       );
 
       if (response.data.success) {
-        setOrders(response.data.orders);
+        setOrders(response.data.orders.reverse());
       } else {
         toast.error(response.data.message);
       }
@@ -95,7 +95,7 @@ const Orders = ({ token }) => {
             {/* Price and Status */}
             <div>
               <p className="font-semibold mb-2">
-                Total: {order.currency}
+                Total: {order.currency === "usd" ? " ₹" : order.currency}
                 {order.amount}
               </p>
               <select

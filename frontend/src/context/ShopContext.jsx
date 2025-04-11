@@ -121,7 +121,7 @@ const ShopContextProvider = (props) => {
   };
 
   const getConvertedPrice = (price) => {
-    if (currency === "$") return (price / 86).toFixed(2); // Example conversion rate
+    if (currency === "$") return (price / 90).toFixed(2); // Example conversion rate
     return price;
   };
 

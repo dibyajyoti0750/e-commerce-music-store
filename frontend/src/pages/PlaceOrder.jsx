@@ -39,6 +39,39 @@ const PlaceOrder = () => {
     setFormData((data) => ({ ...data, [name]: value }));
   };
 
+  const initPay = (order) => {
+    const options = {
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+      amount: order.amount,
+      currency: order.currency,
+      name: "Order Payment",
+      description: "Order Payment",
+      order_id: order.id,
+      receipt: order.receipt,
+      handler: async (response) => {
+        console.log(response);
+        try {
+          const { data } = await axios.post(
+            backendUrl + "/api/order/verifyRazorpay",
+            response,
+            { headers: { token } }
+          );
+
+          if (data.success) {
+            navigate("/orders");
+            setCartItems({});
+          }
+        } catch (error) {
+          console.log(error);
+          toast.error(error.message);
+        }
+      },
+    };
+
+    const rzp = new window.Razorpay(options);
+    rzp.open();
+  };
+
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
@@ -82,6 +115,44 @@ const PlaceOrder = () => {
             navigate("/orders");
           } else {
             toast.error(response.data.message);
+          }
+          break;
+
+        // API Calls for Stripe
+        case "stripe":
+          const inrToUsdRate = 90; // temp hardcoded
+          const convertedAmountInUSD = (
+            orderData.amount / inrToUsdRate
+          ).toFixed(2);
+          const amountInCents = Math.round(convertedAmountInUSD * 100);
+
+          const responseStripe = await axios.post(
+            backendUrl + "/api/order/stripe",
+            {
+              ...orderData,
+              amount: amountInCents,
+              currency: "usd",
+            },
+            { headers: { token } }
+          );
+
+          if (responseStripe.data.success) {
+            const { session_url } = responseStripe.data;
+            window.location.replace(session_url);
+          } else {
+            toast.error(responseStripe.data.message);
+          }
+          break;
+
+        case "razorpay":
+          const responseRazorpay = await axios.post(
+            backendUrl + "/api/order/razorpay",
+            orderData,
+            { headers: { token } }
+          );
+
+          if (responseRazorpay.data.success) {
+            initPay(responseRazorpay.data.order);
           }
           break;
 
@@ -245,16 +316,20 @@ const PlaceOrder = () => {
 
             {/* -------------------- COD -------------------- */}
             <div
-              onClick={() => setMethod("cod")}
-              className="flex items-center gap-3 border py-1.5 px-3 cursor-pointer h-12"
+              // onClick={() => setMethod("cod")}
+              // className="flex items-center gap-3 border py-1.5 px-3 cursor-pointer h-12"
+              className="flex items-center gap-3 border py-1.5 px-3 h-12 opacity-50 cursor-not-allowed"
             >
               <p
                 className={`min-w-3.5 h-3.5 border rounded-full ${
                   method === "cod" ? "bg-green-500" : ""
                 }`}
               ></p>
-              <p className="text-gray-500 text-md font-medium mx-4">
+              {/* <p className="text-gray-500 text-md font-medium mx-4">
                 CASH ON DELIVERY
+              </p> */}
+              <p className="text-gray-500 text-sm font-medium mx-4">
+                CASH ON DELIVERY (Unavailable)
               </p>
             </div>
           </div>
