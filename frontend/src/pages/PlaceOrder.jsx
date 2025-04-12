@@ -140,6 +140,7 @@ const PlaceOrder = () => {
             const { session_url } = responseStripe.data;
             window.location.replace(session_url);
           } else {
+            console.log(responseStripe.data);
             toast.error(responseStripe.data.message);
           }
           break;
@@ -153,6 +154,9 @@ const PlaceOrder = () => {
 
           if (responseRazorpay.data.success) {
             initPay(responseRazorpay.data.order);
+          } else {
+            console.log(responseRazorpay.data);
+            toast.error(responseRazorpay.data.message);
           }
           break;
 
