@@ -119,7 +119,8 @@ const Navbar = () => {
             onClick={() => setVisible(false)}
             className="flex items-center gap-4 p-3 cursor-pointer"
           >
-            <img className="h-4 rotate-180" src={assets.dropdown_icon} alt="" />
+            <img className="w-6 h-6" src={assets.back_icon} alt="" />
+            {/* <a href="https://www.flaticon.com/free-icons/left-arrow" title="left arrow icons">Left arrow icons created by Arkinasi - Flaticon</a> */}
             <p>Back</p>
           </div>
           <NavLink

@@ -5,6 +5,7 @@ import cross_icon from "./close.png";
 import profile_icon from "./user.png";
 import cart_icon from "./shopping-bag.png";
 import menu_icon from "./menu.png";
+import back_icon from "./left.png";
 import hero_img from "./hero.jpeg";
 import replace_icon from "./replacement.png";
 import check_icon from "./badge.png";
@@ -28,6 +29,7 @@ export const assets = {
   profile_icon,
   cart_icon,
   menu_icon,
+  back_icon,
   hero_img,
   replace_icon,
   check_icon,
