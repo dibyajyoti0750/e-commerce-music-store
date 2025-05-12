@@ -99,7 +99,7 @@ const List = ({ token }) => {
             <div className="flex justify-center">
               <Trash2
                 onClick={() => confirmAndRemove(item._id)}
-                className="w-4 h-4 text-red-500 hover:text-red-700 cursor-pointer"
+                className="w-5 h-5 text-red-500 hover:text-red-700 cursor-pointer"
               />
             </div>
           </div>
