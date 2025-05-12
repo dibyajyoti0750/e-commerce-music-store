@@ -3,6 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
+import WhatsAppIcon from "../components/WhatsAppIcon";
 
 const Collection = () => {
   const { products, search, showSearch } = useContext(ShopContext);
@@ -254,6 +255,8 @@ const Collection = () => {
           </div>
         )}
       </div>
+
+      <WhatsAppIcon />
     </div>
   );
 };

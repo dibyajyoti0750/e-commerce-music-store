@@ -37,7 +37,7 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink to="/collection" className="flex flex-col items-center gap-1">
-          <p>INSTRUMENTS</p>
+          <p>CATALOG</p>
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
 
@@ -135,7 +135,7 @@ const Navbar = () => {
             className="py-2 pl-6 border"
             to="/collection"
           >
-            COLLECTION
+            CATALOG
           </NavLink>
           <NavLink
             onClick={() => setVisible(false)}

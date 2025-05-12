@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../components/Title";
 import NewsLetterBox from "../components/NewsletterBox";
 import { assets } from "../assets/assets";
+import WhatsAppIcon from "../components/WhatsAppIcon";
 
 const Contact = () => {
   return (
@@ -52,6 +53,7 @@ const Contact = () => {
       </div>
 
       <NewsLetterBox />
+      <WhatsAppIcon />
     </div>
   );
 };

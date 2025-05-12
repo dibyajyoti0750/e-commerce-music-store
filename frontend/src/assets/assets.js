@@ -21,6 +21,7 @@ import stripe_logo from "./Stripe.png";
 import razorpay_logo from "./Razorpay.png";
 import about_img from "./about.jpg";
 import contact_img from "./contact.jpg";
+import whatsapp_icon from "./whatsapp.png";
 
 export const assets = {
   logo,
@@ -43,6 +44,7 @@ export const assets = {
   razorpay_logo,
   about_img,
   contact_img,
+  whatsapp_icon,
 };
 
 export const products = [

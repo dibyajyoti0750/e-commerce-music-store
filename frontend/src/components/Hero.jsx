@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,9 +20,12 @@ const Hero = () => {
           </h1>
 
           <div className="flex items-center gap-3 md:gap-4 group cursor-pointer">
-            <p className="font-semibold text-base md:text-lg hover:opacity-80 transition-opacity">
-              SHOP NOW
-            </p>
+            <NavLink
+              to="/collection"
+              className="font-semibold text-base md:text-lg hover:opacity-80 transition-opacity"
+            >
+              <p>SHOP NOW</p>
+            </NavLink>
             <div className="w-10 md:w-16 h-[1.5px] bg-[#414141] flex-shrink-0" />
           </div>
         </div>

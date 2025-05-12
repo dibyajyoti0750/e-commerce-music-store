@@ -5,6 +5,7 @@ import BestSeller from "../components/BestSeller";
 import OurPolicy from "../components/OurPolicy";
 import NewsletterBox from "../components/NewsletterBox";
 import CurrencySelector from "../components/CurrencySelector";
+import WhatsAppIcon from "../components/WhatsAppIcon";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <BestSeller />
       <OurPolicy />
       <NewsletterBox />
+      <WhatsAppIcon />
     </div>
   );
 };
