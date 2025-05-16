@@ -5,6 +5,13 @@ import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEarthAmericas,
+  faComment,
+  faEnvelope,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 const PlaceOrder = () => {
   const [method, setMethod] = useState("razorpay");
@@ -292,40 +299,49 @@ const PlaceOrder = () => {
 
           {/* -------------------- Payment Method Selection -------------------- */}
           <div className="flex gap-3 flex-col lg:flex-row">
-            {/* -------------------- Stripe -------------------- */}
-            <div
-              onClick={() => setMethod("stripe")}
-              className="flex items-center gap-3 border py-1.5 px-3 cursor-pointer h-12"
-            >
-              <p
-                className={`min-w-3.5 h-3.5 border rounded-full ${
-                  method === "stripe" ? "bg-green-500" : ""
-                }`}
-              ></p>
-              <img className="h-8 mx-3" src={assets.stripe_logo} alt="" />
-            </div>
-
             {/* -------------------- Razorpay -------------------- */}
             <div
               onClick={() => setMethod("razorpay")}
-              className="flex items-center gap-3 border py-1.5 px-3 cursor-pointer h-12"
+              className="flex items-center gap-3 border border-gray-300 py-1.5 px-3 cursor-pointer h-12"
             >
               <p
-                className={`min-w-3.5 h-3.5 border rounded-full ${
+                className={`min-w-3.5 h-3.5 border border-gray-400 rounded-full ${
                   method === "razorpay" ? "bg-green-500" : ""
                 }`}
               ></p>
-              <img className="h-6 mx-3" src={assets.razorpay_logo} alt="" />
+              <img
+                className="h-6 mx-3 mr-0"
+                src={assets.razorpay_logo}
+                alt=""
+              />
+              <p className="text-sm font-medium ml-[-0.2rem]">(India only)</p>
+            </div>
+
+            {/* -------------------- Stripe -------------------- */}
+            <div
+              // onClick={() => setMethod("stripe")}
+              // className="flex items-center gap-3 border border-gray-300 py-1.5 px-3 cursor-pointer h-12"
+              className="flex items-center gap-3 border border-gray-300 opacity-60 py-1.5 px-3 h-12 cursor-not-allowed"
+            >
+              <p
+                className={`min-w-3.5 h-3.5 border border-gray-400 rounded-full ${
+                  method === "stripe" ? "bg-green-500" : ""
+                }`}
+              ></p>
+              <img className="h-8 mx-3 mr-0" src={assets.stripe_logo} alt="" />
+              <p className="text-gray-500 text-sm font-medium ml-[-0.5rem]">
+                (Unavailable)
+              </p>
             </div>
 
             {/* -------------------- COD -------------------- */}
             <div
               // onClick={() => setMethod("cod")}
               // className="flex items-center gap-3 border py-1.5 px-3 cursor-pointer h-12"
-              className="flex items-center gap-3 border py-1.5 px-3 h-12 opacity-50 cursor-not-allowed"
+              className="flex items-center gap-3 border border-gray-300 opacity-60 py-1.5 px-3 h-12 cursor-not-allowed"
             >
               <p
-                className={`min-w-3.5 h-3.5 border rounded-full ${
+                className={`min-w-3.5 h-3.5 border border-gray-400 rounded-full ${
                   method === "cod" ? "bg-green-500" : ""
                 }`}
               ></p>
@@ -333,8 +349,32 @@ const PlaceOrder = () => {
                 CASH ON DELIVERY
               </p> */}
               <p className="text-gray-500 text-sm font-medium mx-4">
-                CASH ON DELIVERY (Unavailable)
+                CASH ON DELIVERY &nbsp; (Unavailable)
               </p>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-yellow-50 border border-yellow-300 text-gray-800 p-3 rounded text-sm">
+            <p className="font-medium mb-1">
+              <FontAwesomeIcon icon={faEarthAmericas} /> Outside India?
+            </p>
+            <p className="mb-2">
+              We currently accept payments via Razorpay (India only).
+            </p>
+            <p className="mb-1">To place an order from outside India:</p>
+            <div className="flex flex-col gap-1">
+              <a href="https://wa.me/918777435274" className="text-blue-600 ">
+                <FontAwesomeIcon icon={faComment} /> Chat on WhatsApp
+              </a>
+              <a
+                href="mailto:sambhumondal572@gmail.com"
+                className="text-blue-600 "
+              >
+                <FontAwesomeIcon icon={faEnvelope} /> Email Us
+              </a>
+              <a href="tel:+918777435274" className="text-blue-600 ">
+                <FontAwesomeIcon icon={faPhone} /> Call Us
+              </a>
             </div>
           </div>
 
