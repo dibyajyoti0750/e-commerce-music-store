@@ -24,6 +24,7 @@ const Product = () => {
 
   useEffect(() => {
     fetchProductData();
+    window.scrollTo(0, 0); // <- This line
   }, [productId, products]);
 
   return productData ? (
@@ -38,7 +39,6 @@ const Product = () => {
                 onClick={() => setImage(item)}
                 src={item}
                 key={index}
-                // className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer"
                 className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer h-[6.25rem] object-cover"
                 alt=""
               />
@@ -106,12 +106,6 @@ const Product = () => {
             {productData.description}
           </p>
 
-          {/* Tuning */}
-          <div className="mt-5">
-            <h3 className="text-lg font-medium">Tuning</h3>
-            <p className="text-gray-600 text-sm">{productData.tuning}</p>
-          </div>
-
           {/* Materials */}
           <div className="flex flex-col gap-4 mt-5">
             <h3 className="text-lg font-medium">Materials</h3>
@@ -136,6 +130,12 @@ const Product = () => {
             <p className="text-gray-600 text-sm">
               Dimensions: {productData.dimensions}
             </p>
+          </div>
+
+          {/* Tuning */}
+          <div className="mt-5">
+            <h3 className="text-lg font-medium">Tuning</h3>
+            <p className="text-gray-600 text-sm">{productData.tuning}</p>
           </div>
 
           <button

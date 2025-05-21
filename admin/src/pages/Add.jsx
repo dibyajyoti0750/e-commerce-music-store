@@ -103,7 +103,7 @@ const Add = ({ token }) => {
               className={
                 image1
                   ? "w-full h-full object-cover"
-                  : "w-12 h-12 object-contain"
+                  : "w-12 h-12 object-contain opacity-70"
               }
               src={!image1 ? assets.upload_area : URL.createObjectURL(image1)}
               alt="Upload"
@@ -124,7 +124,7 @@ const Add = ({ token }) => {
               className={
                 image2
                   ? "w-full h-full object-cover"
-                  : "w-12 h-12 object-contain"
+                  : "w-12 h-12 object-contain opacity-70"
               }
               src={!image2 ? assets.upload_area : URL.createObjectURL(image2)}
               alt="Upload"
@@ -145,7 +145,7 @@ const Add = ({ token }) => {
               className={
                 image3
                   ? "w-full h-full object-cover"
-                  : "w-12 h-12 object-contain"
+                  : "w-12 h-12 object-contain opacity-70"
               }
               src={!image3 ? assets.upload_area : URL.createObjectURL(image3)}
               alt="Upload"
@@ -166,7 +166,7 @@ const Add = ({ token }) => {
               className={
                 image4
                   ? "w-full h-full object-cover"
-                  : "w-12 h-12 object-contain"
+                  : "w-12 h-12 object-contain opacity-70"
               }
               src={!image4 ? assets.upload_area : URL.createObjectURL(image4)}
               alt="Upload"
