@@ -6,7 +6,12 @@ import profile_icon from "./user.png";
 import cart_icon from "./shopping-bag.png";
 import menu_icon from "./menu.png";
 import back_icon from "./left.png";
-import hero_img from "./hero.jpeg";
+
+import hero_img1 from "./hero_img1.png";
+import hero_img2 from "./hero_img2.png";
+import hero_img3 from "./hero_img3.png";
+import hero_img4 from "./hero_img4.png";
+
 import replace_icon from "./replacement.png";
 import check_icon from "./badge.png";
 import support_icon from "./costumer-service.png";
@@ -24,6 +29,8 @@ import contact_img from "./contact.jpg";
 import whatsapp_icon from "./whatsapp.png";
 
 export const assets = {
+  hero_carousel: [hero_img1, hero_img2, hero_img3, hero_img4],
+
   logo,
   search_icon,
   cross_icon,
@@ -31,7 +38,6 @@ export const assets = {
   cart_icon,
   menu_icon,
   back_icon,
-  hero_img,
   replace_icon,
   check_icon,
   support_icon,
