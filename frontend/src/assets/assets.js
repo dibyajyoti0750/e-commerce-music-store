@@ -24,8 +24,8 @@ import filter_off from "./filter_off.png";
 import bin_icon from "./bin.png";
 import stripe_logo from "./Stripe.png";
 import razorpay_logo from "./Razorpay.png";
-import about_img from "./about.jpg";
-import contact_img from "./contact.jpg";
+import about_img from "./about.png";
+import contact_img from "./contact.png";
 import whatsapp_icon from "./whatsapp.png";
 
 export const assets = {
