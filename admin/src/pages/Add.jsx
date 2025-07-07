@@ -215,11 +215,27 @@ const Add = ({ token }) => {
             <option value="Sarod">Sarod</option>
             <option value="Santur">Santur</option>
             <option value="Swarmandal">Swarmandal</option>
+            <option value="Dilruba">Dilruba</option>
             <option value="Esraj">Esraj</option>
+            <option value="Big Esraj">Big Esraj</option>
             <option value="Sitar">Sitar</option>
+            <option value="Sitar Pt. Ravi Shankar Gharana">
+              Sitar Pt. Ravi Shankar Gharana
+            </option>
+            <option value="Sitar Pt. Vilayat Khan Gharana">
+              Sitar Pt. Vilayat Khan Gharana
+            </option>
             <option value="Tanpura">Tanpura</option>
+            <option value="Box Tanpura">Box Tanpura</option>
+            <option value="Swarmandal + Tanpura">Swarmandal + Tanpura</option>
+            <option value="Sursingar">Sursingar</option>
             <option value="Sarangi">Sarangi</option>
+            <option value="Surbahar">Surbahar</option>
             <option value="Rabab">Rabab</option>
+            <option value="Punjabi Rabab">Punjabi Rabab</option>
+            <option value="Afgani Rabab">Afgani Rabab</option>
+            <option value="Electric Sitar">Electric Sitar</option>
+            <option value="Tanpuri">Tanpuri</option>
             <option value="Strings">Strings</option>
             <option value="Cases">Cases</option>
             <option value="Plectrums">Plectrums</option>
@@ -234,10 +250,10 @@ const Add = ({ token }) => {
             className="w-full px-3 py-2"
           >
             <option value="Plucked">Plucked</option>
-            <option value="Struck">Struck</option>
             <option value="Bowed">Bowed</option>
-            <option value="Professional">Professional</option>
+            <option value="Struck">Struck</option>
             <option value="Student">Student</option>
+            <option value="Professional">Professional</option>
           </select>
         </div>
 

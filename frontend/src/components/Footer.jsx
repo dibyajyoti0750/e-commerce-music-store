@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,10 +25,46 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5">COMPANY</p>
           <ul className="flex flex-col gap-1 text-gray-600">
-            <li>Home</li>
-            <li>About us</li>
-            <li>Delivery</li>
-            <li>Privacy policy</li>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "text-black underline" : "hover:underline"
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-black underline" : "hover:underline"
+                }
+              >
+                About us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/orders"
+                className={({ isActive }) =>
+                  isActive ? "text-black underline" : "hover:underline"
+                }
+              >
+                Delivery
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "text-black underline" : "hover:underline"
+                }
+              >
+                Privacy policy
+              </NavLink>
+            </li>
           </ul>
         </div>
 

@@ -108,24 +108,6 @@ const Collection = () => {
               <input
                 className="w-3"
                 type="checkbox"
-                value={"Sitar"}
-                onChange={toggleCategory}
-              />{" "}
-              Sitar
-            </p>
-            <p className="flex gap-2">
-              <input
-                className="w-3"
-                type="checkbox"
-                value={"Esraj"}
-                onChange={toggleCategory}
-              />{" "}
-              Esraj
-            </p>
-            <p className="flex gap-2">
-              <input
-                className="w-3"
-                type="checkbox"
                 value={"Sarod"}
                 onChange={toggleCategory}
               />{" "}
@@ -144,19 +126,64 @@ const Collection = () => {
               <input
                 className="w-3"
                 type="checkbox"
-                value={"Rabab"}
+                value={"Swarmandal"}
                 onChange={toggleCategory}
               />{" "}
-              Rabab
+              Swarmandal
             </p>
             <p className="flex gap-2">
               <input
                 className="w-3"
                 type="checkbox"
-                value={"Sarangi"}
+                value={"Dilruba"}
                 onChange={toggleCategory}
               />{" "}
-              Sarangi
+              Dilruba
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Esraj"}
+                onChange={toggleCategory}
+              />{" "}
+              Esraj
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Big Esraj"}
+                onChange={toggleCategory}
+              />{" "}
+              Big Esraj
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Sitar"}
+                onChange={toggleCategory}
+              />{" "}
+              Sitar
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Sitar Pt. Ravi Shankar Gharana"}
+                onChange={toggleCategory}
+              />{" "}
+              Sitar Pt. Ravi Shankar Gharana
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Sitar Pt. Vilayat Khan Gharana"}
+                onChange={toggleCategory}
+              />{" "}
+              Sitar Pt. Vilayat Khan Gharana
             </p>
             <p className="flex gap-2">
               <input
@@ -171,10 +198,127 @@ const Collection = () => {
               <input
                 className="w-3"
                 type="checkbox"
-                value={"Swarmandal"}
+                value={"Box Tanpura"}
                 onChange={toggleCategory}
               />{" "}
-              Swarmandal
+              Box Tanpura
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Swarmandal + Tanpura"}
+                onChange={toggleCategory}
+              />{" "}
+              Swarmandal + Tanpura
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Sursingar"}
+                onChange={toggleCategory}
+              />{" "}
+              Sursingar
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Sarangi"}
+                onChange={toggleCategory}
+              />{" "}
+              Sarangi
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Surbahar"}
+                onChange={toggleCategory}
+              />{" "}
+              Surbahar
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Rabab"}
+                onChange={toggleCategory}
+              />{" "}
+              Rabab
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Punjabi Rabab"}
+                onChange={toggleCategory}
+              />{" "}
+              Punjabi Rabab
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Afgani Rabab"}
+                onChange={toggleCategory}
+              />{" "}
+              Afgani Rabab
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Electric Sitar"}
+                onChange={toggleCategory}
+              />{" "}
+              Electric Sitar
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Tanpuri"}
+                onChange={toggleCategory}
+              />{" "}
+              Tanpuri
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Strings"}
+                onChange={toggleCategory}
+              />{" "}
+              Strings
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Cases"}
+                onChange={toggleCategory}
+              />{" "}
+              Cases
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Plectrums"}
+                onChange={toggleCategory}
+              />{" "}
+              Plectrums
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Electronics"}
+                onChange={toggleCategory}
+              />{" "}
+              Electronics
             </p>
           </div>
         </div>
@@ -214,6 +358,24 @@ const Collection = () => {
                 onChange={toggleSubCategory}
               />{" "}
               Struck Instruments
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Student"}
+                onChange={toggleSubCategory}
+              />{" "}
+              Student
+            </p>
+            <p className="flex gap-2">
+              <input
+                className="w-3"
+                type="checkbox"
+                value={"Professional"}
+                onChange={toggleSubCategory}
+              />{" "}
+              Professional
             </p>
           </div>
         </div>
