@@ -301,9 +301,9 @@ const PlaceOrder = () => {
           <div className="flex gap-3 flex-col lg:flex-row">
             {/* -------------------- Razorpay -------------------- */}
             <div
-              // onClick={() => setMethod("razorpay")}
-              // className="flex items-center gap-3 border border-gray-300 py-1.5 px-3 cursor-pointer h-12"
-              className="flex items-center gap-3 border border-gray-300 opacity-60 py-1.5 px-3 h-12 cursor-not-allowed"
+              onClick={() => setMethod("razorpay")}
+              className="flex items-center gap-3 border border-gray-300 py-1.5 px-3 cursor-pointer h-12"
+              // className="flex items-center gap-3 border border-gray-300 opacity-60 py-1.5 px-3 h-12 cursor-not-allowed"
             >
               <p
                 className={`min-w-3.5 h-3.5 border border-gray-400 rounded-full ${
@@ -315,9 +315,9 @@ const PlaceOrder = () => {
                 src={assets.razorpay_logo}
                 alt=""
               />
-              <p className="text-gray-500 text-sm font-medium ml-[-0.2rem]">
+              {/* <p className="text-gray-500 text-sm font-medium ml-[-0.2rem]">
                 (Unavailable)
-              </p>
+              </p> */}
             </div>
 
             {/* -------------------- Stripe -------------------- */}
